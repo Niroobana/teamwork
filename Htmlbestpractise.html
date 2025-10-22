@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic metadata & SEO -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MyCompany — Professional Web Solutions</title>
+  <meta name="description" content="MyCompany provides professional web and software solutions. Contact us for development and consulting services.">
+  <meta name="keywords" content="web development, software, consultancy, MyCompany">
+  <!-- Optional: author, theme-color, open-graph tags could be added -->
+</head>
+<body>
+
+  <!-- ===== Header & Navigation (semantic + accessible) ===== -->
+  <header>
+    <div class="site-branding">
+      <img src="logo.png" alt="MyCompany logo" width="160" height="60">
+      <h1>MyCompany</h1>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Main content ===== -->
+  <main>
+    <!-- Hero / Intro as a section with figure for image -->
+    <section id="hero" aria-labelledby="hero-title">
+      <h2 id="hero-title">Welcome to MyCompany</h2>
+      <p>We design and build user-focused web and software products.</p>
+
+      <figure>
+        <img src="hero.jpg" alt="Team collaborating in a modern office setting" width="800" height="400">
+        <figcaption>Our team working together on product strategy and design.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Contact prompt with proper mailto link -->
+    <section aria-labelledby="contact-prompt">
+      <h3 id="contact-prompt">Get in touch</h3>
+      <p>For enquiries contact us at
+        <a href="mailto:info@company.com" title="Send email to info@company.com">info@company.com</a>
+      </p>
+    </section>
+
+    <!-- ===== Contact Form (accessible & semantic) ===== -->
+    <section id="contact-form" aria-labelledby="form-title">
+      <h3 id="form-title">Contact Us</h3>
+
+      <!--
+        - action should point to server endpoint (example used).
+        - method set to POST for form submission.
+        - novalidate removed so browser validation works; use required attributes below.
+      -->
+      <form action="/submit-contact" method="post" id="contactUs" novalidate>
+        <div>
+          <label for="fullName">Full Name</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Your full name"
+            autocomplete="name"
+            required>
+        </div>
+
+        <div>
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="your@example.com"
+            autocomplete="email"
+            required>
+        </div>
+
+        <div>
+          <label for="phone">Phone</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+94 77 123 4567"
+            autocomplete="tel">
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Write your message here..."
+            required></textarea>
+        </div>
+
+        <div>
+          <!-- Proper label for checkbox -->
+          <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+          <label for="newsletter">Subscribe to newsletter</label>
+        </div>
+
+        <div>
+          <button type="submit">Send Message</button>
+        </div>
+
+        <!-- Helpful ARIA hint for screen reader users (optional) -->
+        <p class="sr-only" aria-hidden="true">Expected response time: 1–2 business days.</p>
+      </form>
+    </section>
+
+    <!-- ===== Team Table (accessible table markup) ===== -->
+    <section aria-labelledby="team-title">
+      <h3 id="team-title">Our Team</h3>
+
+      <table>
+        <caption>Employee directory — ID, name, role</caption>
+        <thead>
+          <tr>
+            <th scope="col">Employee ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>101</td>
+            <td>John</td>
+            <td>Manager</td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>Sara</td>
+            <td>Developer</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== Media: Video & Audio with controls, figure & captions ===== -->
+    <section aria-labelledby="media-title">
+      <h3 id="media-title">Company Introduction</h3>
+
+      <figure>
+        <!-- controls for accessibility; poster shown before playback -->
+        <video controls width="640" height="360" poster="intro-poster.jpg">
+          <source src="intro.mp4" type="video/mp4">
+          <!-- Example caption track (optional file) -->
+          <track kind="captions" srclang="en" label="English captions" src="intro-captions.vtt">
+          Your browser does not support the video element.
+        </video>
+        <figcaption>Introductory video about MyCompany (captions available).</figcaption>
+      </figure>
+
+      <figure>
+        <audio controls>
+          <source src="background.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <figcaption>Ambient background audio used in videos (use transcripts for accessibility).</figcaption>
+      </figure>
+
+      <!-- Optional: transcript for accessibility -->
+      <details>
+        <summary>Transcript for the intro video</summary>
+        <p>[Transcript text goes here — include a full textual transcript so users with hearing impairments can access the content.]</p>
+      </details>
+    </section>
+
+    <!-- ===== About (semantic element) ===== -->
+    <section id="about" aria-labelledby="about-title">
+      <h3 id="about-title">About Us</h3>
+      <p>We are a team of professionals building great products that solve real problems. Visit our <a href="about.html">About page</a> for more details.</p>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 MyCompany. All rights reserved.</p>
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>

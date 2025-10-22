@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="[Company Name] — Innovative solutions in [Industry]. View our services, team, projects, and contact information.">
+  <title>[Company Name] — Portfolio</title>
+  <style>
+    /* Simple, clean styling for the portfolio */
+    :root{--accent:#0066CC;--muted:#666;--radius:12px}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.5;margin:0;color:#222;background:#f7f8fb}
+    .container{max-width:1100px;margin:32px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;background:var(--accent);color:#fff;border-radius:10px;display:grid;place-items:center;font-weight:700}
+    nav a{margin-left:12px;text-decoration:none;color:var(--muted)}
+    main{margin-top:28px}
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center}
+    .card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(35,40,50,0.06)}
+    h1{margin:0 0 8px;font-size:28px}
+    p.lead{color:var(--muted);margin:0}
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .service h3{margin:0 0 8px}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
+    .projects img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+    .team{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+    .member{display:flex;gap:12px;align-items:center}
+    .member img{width:64px;height:64px;object-fit:cover;border-radius:50%}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+    form label{display:block;margin-bottom:6px;font-weight:600}
+    input,textarea{width:100%;padding:10px;border:1px solid #e6e9ef;border-radius:8px}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;border:0;cursor:pointer}
+    @media (max-width:880px){.hero{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">CN</div>
+        <div>
+          <strong>[Company Name]</strong>
+          <div style="font-size:13px;color:var(--muted)">Innovating in [Industry]</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="card">
+            <h1>[Company Name]</h1>
+            <p class="lead">We deliver <strong>fast, reliable</strong> and <strong>scalable</strong> solutions in [area]. Partnered with clients to transform ideas into products.</p>
+            <div class="services" style="margin-top:16px">
+              <div class="service card" role="article" aria-labelledby="s1">
+                <h3 id="s1">Service One</h3>
+                <p class="muted">Short description of service one and the value it provides to clients.</p>
+              </div>
+              <div class="service card" role="article" aria-labelledby="s2">
+                <h3 id="s2">Service Two</h3>
+                <p class="muted">Short description of service two.</p>
+              </div>
+              <div class="service card" role="article" aria-labelledby="s3">
+                <h3 id="s3">Service Three</h3>
+                <p class="muted">Short description of service three.</p>
+              </div>
+            </div>
+          </div>
+
+          <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading" style="margin-top:18px">Selected Projects</h2>
+            <div class="projects">
+              <article class="card">
+                <img src="https://via.placeholder.com/600x400?text=Project+1" alt="Screenshot of Project 1">
+                <h4>Project One</h4>
+                <p class="muted">One-line summary of the project and technologies used.</p>
+              </article>
+              <article class="card">
+                <img src="https://via.placeholder.com/600x400?text=Project+2" alt="Screenshot of Project 2">
+                <h4>Project Two</h4>
+                <p class="muted">One-line summary of the project.</p>
+              </article>
+              <article class="card">
+                <img src="https://via.placeholder.com/600x400?text=Project+3" alt="Screenshot of Project 3">
+                <h4>Project Three</h4>
+                <p class="muted">One-line summary of the project.</p>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3>Quick Facts</h3>
+            <ul>
+              <li><strong>Founded:</strong> 20XX</li>
+              <li><strong>Clients:</strong> 50+</li>
+              <li><strong>Offices:</strong> Colombo, Jaffna</li>
+            </ul>
+            <h3 style="margin-top:12px">Contact</h3>
+            <p class="muted">hello@[company].com<br>+94 77 123 4567</p>
+            <a href="#contact" class="btn" style="display:inline-block;margin-top:10px">Get in touch</a>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h3 id="team">Our Team</h3>
+            <div class="team">
+              <div class="member">
+                <img src="https://via.placeholder.com/128?text=JS" alt="Profile: Jane Smith">
+                <div>
+                  <div><strong>Jane Smith</strong></div>
+                  <div style="font-size:13px;color:var(--muted)">CEO</div>
+                </div>
+              </div>
+              <div class="member">
+                <img src="https://via.placeholder.com/128?text=MK" alt="Profile: Mark Kim">
+                <div>
+                  <div><strong>Mark Kim</strong></div>
+                  <div style="font-size:13px;color:var(--muted)">Head of Product</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" style="margin-top:18px">
+        <div class="card">
+          <h2>About Us</h2>
+          <p class="muted">[Company Name] is a team of designers, engineers and strategists who craft digital experiences and products. We focus on measurable outcomes and long-term partnerships.</p>
+          <h3 style="margin-top:12px">Mission</h3>
+          <p class="muted">To empower businesses by delivering practical, elegant solutions that scale.</p>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:18px">
+        <div class="card">
+          <h2>Contact Us</h2>
+          <form action="#" method="post" novalidate aria-labelledby="contact">
+            <div style="margin-bottom:12px">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required placeholder="Your full name">
+            </div>
+            <div style="margin-bottom:12px">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com">
+            </div>
+            <div style="margin-bottom:12px">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="How can we help?"></textarea>
+            </div>
+            <button class="btn" type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; <span id="year"></span> [Company Name]. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Small script for dynamic year and simple form handling
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('form').addEventListener('submit', function(e){
+      e.preventDefault();
+      // Basic client-side validation
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message){
+        alert('Please fill all required fields.');
+        return;
+      }
+      // Instructors: replace with real submission (fetch / backend)
+      alert('Message sent (demo). Replace with backend API in production.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
